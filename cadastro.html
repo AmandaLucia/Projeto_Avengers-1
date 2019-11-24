@@ -14,9 +14,6 @@
     <!--CDN de licenciamento em (arquivo) jquery.js-->
     <!-- PRECISA USAR ESSAS CDN PARA FUNCIONAMENTO DO JAVASCRIPT COMPILADO -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-
     <title>The Avengers</title>
     <!--Bootstrap JS -->
     <script type="text/javascript" src="js/bootstrap.js">
@@ -64,11 +61,11 @@
                 <div class="row">
                     <div class="col-md-5">
                         <i class="fa fa-address-book" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="receberNome" required="required" id="srtNome" placeholder="Nome" pattern="[a-z\s]+$" maxlength="20">
+                        <input type="text" class="form-control" name="receberNome" required="required" id="srtNome" placeholder="Nome" pattern="[a-z\s|A-Z\s]+$" maxlength="20">
                     </div>
                     <div class="col-md-5">
                         <i class="fa fa-address-book-o" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="receberSobrenome" required="required" id="srtSobrenome" placeholder="Sobrenome" pattern="[a-z\s]+$" maxlength="20">
+                        <input type="text" class="form-control" name="receberSobrenome" required="required" id="srtSobrenome" placeholder="Sobrenome" pattern="[a-z\s|A-Z\s]+$" maxlength="20">
                     </div>
                 </div>
             </div>
@@ -100,11 +97,11 @@
                 <div class="row">
                     <div class="col-md-5">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="receberCep" required="required" id="srtCep" pattern="\d{5}-?\d{3}" maxlength="8" placeholder="CEP">
+                        <input name="receberCep" type="text" maxlength="8" class="form-control" id="srtCep" onblur="pesquisacep(this.value)" placeholder="CEP" required="required">
                     </div>
                     <div class="col-md-5">
                         <i class="fa fa-home" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="receberEndereco" required="required" id="srtEndereco" placeholder="Endereço" pattern="[a-z\s]+$">
+                        <input type="text" class="form-control" name="receberEndereco" required="required" id="srtEndereco" placeholder="Endereço" pattern="[a-z\s|A-Z\s]+$">
                     </div>
                 </div>
             </div>
@@ -112,7 +109,7 @@
                 <div class="row">
                     <div class="col-md-5">
                         <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="receberBairro" required="required" id="srtBairro" placeholder="Bairro" pattern="[a-z\s]+$">
+                        <input type="text" class="form-control" name="receberBairro" required="required" id="srtBairro" placeholder="Bairro" pattern="[a-z\s|A-Z\s]+$">
                     </div>
                     <div class="col-md-5">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
@@ -124,11 +121,11 @@
                 <div class="row">
                     <div class="col-md-5">
                         <i class="fa fa-compass" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="receberCidade" required="required" id="srtCidade" placeholder="Cidade">
+                        <input type="text" class="form-control" name="receberCidade" required="required" id="srtCidade" placeholder="Cidade" pattern="[a-z\s|A-Z\s]+$">
                     </div>
                     <div class="col-md-5">
                         <i class="fa fa-plane" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="receberEstado" required="required" id="srtEstado" placeholder="Estado">
+                        <input type="text" class="form-control" name="receberEstado" required="required" id="srtEstado" placeholder="Estado" pattern="[a-z\s|A-Z\s]+$">
                     </div>
                 </div>
             </div>
